@@ -3,7 +3,7 @@ const caesar = (s, number) => {
   const alphaRegexMinus = /[a-z]/;
   const library = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
-  return s.split(' ').map(st => st.split('').map(char => {
+  return s.split(' ').map(st => st.split('').map((char) => {
     if (char.match(alphaRegexMinus)) {
       let val = 97 + library.indexOf(char) + number;
       if (val > 122) {
